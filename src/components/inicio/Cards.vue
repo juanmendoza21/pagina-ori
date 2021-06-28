@@ -2,29 +2,41 @@
   <div>
     <b-card-group>
       <b-row>
-        <b-col lg="6" class="mt-1">
-          <b-card align="center">
-            <h4 slot="header">Beneficios</h4>
-            <b-col lg="2" class="pb-2">
-               <b-button href="http://www.cajadeprevisionsf.org.ar/montoseg13.php">
-            <img  width="208" height="84" src="@/assets/img/icons/Boton-CONSULTAR_EXPEDIENTE.png">
+        <b-col md="6" class="mt-2">
+          <b-card align="center"   bg-variant="Light"       
+          img-alt="Image"
+          img-top
+          tag="article"
+          >
+            <h4 slot="header">Consulta sobre Beneficios Online (nuevo)
+              &nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </h4>
+            
+               <b-button href="http://www.cajadeprevisionsf.org.ar/preguntas-frecuentes">
+            <img  width="200" height="84" src="@/assets/img/icons/Boton-CONSULTAR_EXPEDIENTE.png">
                </b-button>
-               </b-col> 
-                <b-col lg="2" class="pb-2">
+              
+                
                <b-button href="#" >
-            <img width="208" height="84" src="@/assets/img/icons/Boton-INICIAR_EXPEDIENTE.png">
+            <img width="200" height="84" src="@/assets/img/icons/Boton-INICIAR_EXPEDIENTE.png">
                 </b-button> 
-            </b-col>
+            <p>&nbsp; &nbsp;</p>
+            <p>&nbsp; &nbsp;</p>
             <hr>
-            <b-card-text>Por fallecimiento, por incapacidad, por carecer de familiares directos, por jubilación o retiro, anticipo adicional por jubilación, por edad avanzada, por enfermedad del art. 46 bis. Servicio de préstamos personales.</b-card-text>
+            <b-card-text>Realice una Consulta sobre su Expediente en trámite o sobre el inicio de un nuevo trámite haciendo clic en el botón "Consultar Expediente" y completando el formulario con sus datos personales</b-card-text>
           </b-card>
         </b-col>
         <b-col lg="6" class="mt-2">
           <b-card align="center">
-            <h4 slot="header">Préstamos</h4>
-            <img src="@/assets/img/cards/prestamos.png">
-            <hr>
-            <b-card-text>Préstamos para afiliados activos y pasivos, sin gastos administrativos, a tasas muy convenientes.</b-card-text>
+            <h4 slot="header">Préstamos Online</h4>
+             <b-button href="#" >
+            <img width="200" height="84" src="@/assets/img/icons/Boton-01-PRESTAMO.png">
+                </b-button> 
+                <p style="text-align: center;"><span style="font-size: 18pt;"><strong><a href="/servicios/prestamos-condiciones" target="_top" rel="noopener noreferrer">MONTOS Y CUOTAS Click acá</a></strong></span></p>
+                <p style="text-align: center;"><span style="font-size: 18pt;"><strong><a href="index.php/servicios/consultas" target="_blank" rel="noopener noreferrer"><span style="font-size: 16pt;">CONSULTAS SOBRE PRÉSTAMOS Click acá</span></a></strong></span></p>
+                  <hr>
+            <b-card-text>(Nos contactamos por mail. Días hábiles de 7.00 a 13.00hs) </b-card-text>
           </b-card>
         </b-col>
         

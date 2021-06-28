@@ -2,74 +2,67 @@
   <div>
     <TituloPrincipal :titulo="titulo"/>
     
-    <h3>Requisitos para afiliados ACTIVOS</h3>
-    <p><strong>{{tituloRequisitosActivosA}}</strong></p>
-    <div v-for="(requisito, index) of requisitosActivosA" :key="'requisitoAA'+index">
-      <p>{{requisito}}</p>
-    </div>
-    <p><strong>{{tituloRequisitosActivosB}}</strong></p>
-    <div v-for="(requisito, index) of requisitosActivosB" :key="'requisitoAB'+index">
-      <p>{{requisito}}</p>
-    </div>
-    
     <hr>
-    <h3>Requisitos para afiliados ACTIVOS</h3>
-    <p><strong>{{tituloRequisitosPasivosA}}</strong></p>
-    <div v-for="(requisito, index) of requisitosPasivosA" :key="'requisitoPA'+index">
-      <p>{{requisito}}</p>
+    <h3>Solicitar Préstamo</h3>
+      <b-col lg="12" class="mt-2">
+          <b-card align="center">
+            <h4 slot="header">Préstamos Online</h4>
+             <b-button href="#" >
+            <img width="200" height="84" src="../../assets/img/icons/Boton_PRESTAMO_TRADICIONAL.png">
+                </b-button> 
+                <hr>
+                <b-button href="#" >
+            <img width="200" height="84" src="../../assets/img/icons/Boton_PRESTAMO_TRADICIONAL.png">
+                </b-button> 
+                <p style="text-align: center;"><span style="font-size: 18pt;"><strong><a href="/servicios/prestamos-condiciones" target="_top" rel="noopener noreferrer">MONTOS Y CUOTAS Click acá</a></strong></span></p>
+                <p style="text-align: center;"><span style="font-size: 18pt;"><strong><a href="index.php/servicios/consultas" target="_blank" rel="noopener noreferrer"><span style="font-size: 16pt;">CONSULTAS SOBRE PRÉSTAMOS Click acá</span></a></strong></span></p>
+                  <hr>
+            <b-card-text>(Nos contactamos por mail. Días hábiles de 7.00 a 13.00hs) </b-card-text>
+          </b-card>
+        </b-col>
+       
+       
+       
+       
+       <iframe
+      :src="iframeSolicitud.src"
+      width="85%"
+      :height="iframeSolicitud.altura"
+      style="border: none;"
+      scrolling="yes"
+    ></iframe>
+  <hr>
+  <div v-for="(solicitud, index) of solicitud" :key="'solicitud'+index">
+      <p>{{solicitud}}</p>
     </div>
-    <p><strong>{{tituloRequisitosPasivosB}}</strong></p>
-    <div v-for="(requisito, index) of requisitosPasivosB" :key="'requisitoPB'+index">
-      <p>{{requisito}}</p>
-    </div>
-   
   </div>
+
 </template>
 
 <script>
 import TituloPrincipal from "@/components/general/TituloPrincipal.vue";
 
 export default {
-  name: "VPrestamosRequisitos",
+  name: "VPrestamosSolicitud",
   data() {
     return {
-      titulo: "PRÉSTAMOS : REQUISITOS",
-      tituloRequisitosActivosA: "a) Si realiza la gestión personalmente ante las sedes Santa Fe o Rosario de la Caja:",
-      tituloRequisitosActivosB: "b) Si envía la solicitud:",
-      requisitosActivosA: [
-        "1 - Completar la solicitud con los datos requeridos.",
-        "2 - Original y fotocopia del documento de identidad (L.E./L.C./D.N.I.).",
-        "3 - Original y fotocopia del último recibo de sueldos.",
-        "4 - Dos autorizaciones de descuento en original firmada por el solicitante y firmada por el habilitado o autoridad responsable del pago de sueldos con su sello aclaratorio y el de la repartición.",
-        "5 - Ticket del cajero de la cuenta salario en pesos.",
-        "6 - Solamente se exigirá garantía solidaria al personal reemplazante y al interino."
+      titulo: "SOLICITUD DE PRÉSTAMO",
+      iframeSolicitud: {
+        src: "https://docs.google.com/forms/d/e/1FAIpQLSdu8jDZP3ShgkTa_AQGzTFlqbI0XvoA_Jo5LgYcXbAox6iibg/viewform",
+        altura: "880px",
+        
+      },
+      solicitud: [
+        "1 - Para afiliados activos y pasivos.",
+        "2 - Sin gastos administrativos.",
+        "3 - Tasa de interés sobre saldo (sistema francés).",
+        "4 - Depósito en caja de ahorro salario.",
+        "5 - Descuento en recibo de haberes, desde el mes siguiente de percibido el préstamo.",
+        "6 - No poseer quiebras y/o embargos.",
+        "7 - Haber cancelado los préstamos anteriores en nuestro Organismo.",
+        "8 - Tener margen para el descuento de la cuota.",
+        "9 - Cancelación anticipada del préstamo: Es posible cancelar el mismo, en cualquier momento, sin costo alguno, con deducción de intereses. Sólo es necesario una nota con sus datos personales (documento, domicilio, teléfono) en que manifieste su voluntad de cancelar, y su recibo de haberes. Si usted reside en el interior, envíe esta documentación por fax o por correo y por el mismo medio le responderemos."
       ],
-      requisitosActivosB: [
-        "1 - Completar y firmar la solicitud.",
-        "2 - Fotocopia del documento de identidad (L.E./L.C./D.N.I.).",
-        "3 - Fotocopia del último recibo de sueldo.",
-        "4 - Dos autorizaciones de descuento en original firmada por el solicitante y firmada por el habilitado o autoridad responsable del pago de sueldos con su sello aclaratorio y el de la repartición.",
-        "5 - Ticket del cajero de la cuenta salario en pesos.",
-        "6 - Solamente se exigirá garantía solidaria al personal reemplazante y al interino.",
-        "IMPORTANTE: - La firma en la solicitud y las fotocopias deberán estar certificadas por habilitado de la repartición responsable del pago de sueldos o autoridad superior, o por la Policía, con su sello aclaratorio y el de la repartición."
-      ],
-      tituloRequisitosPasivosA: "a) Si realiza la gestión personalmente ante la sede central o delegaciones de la Caja:",
-      tituloRequisitosPasivosB: "b) Si envía la solicitud:",
-      requisitosPasivosA: [
-        "a) Si realiza la gestión personalmente ante la sede central o delegaciones de la Caja:",
-        "2 - Original y fotocopia del documento de identidad (L.E./L.C./D.N.I.).",
-        "3 - Original y fotocopia del último recibo de haber jubilatorio.",
-        "4 - Ticket del cajero de la cuenta salario en pesos.",
-        "5 - Firmar autorización de descuento."
-      ],
-      requisitosPasivosB: [
-        "1 - Completar y firmar la solicitud.",
-        "2 - Fotocopia del documento de identidad (L.E./L.C./D.N.I.).",
-        "3 - Fotocopia del último haber jubilatorio.",
-        "4 - Ticket del cajero de la cuenta salario en pesos.",
-        "5 - Autorización de descuento.",
-        "IMPORTANTE: - La firma en la solicitud y autorización de descuento y las fotocopias, deberán estar certificadas por autoridad judicial o policial."
-      ]
       
     };
   },
