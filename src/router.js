@@ -122,9 +122,9 @@ export default new Router({
       component: () => import(/* webpackChunkName: "prestamos-condiciones" */ './views/servicios/PrestamosCondiciones.vue')
     },
     {
-      path: '/servicios/prestamos-requisitos',
-      name: 'prestamos-requisitos',
-      component: () => import(/* webpackChunkName: "prestamos-requisitos" */ './views/servicios/PrestamosRequisitos.vue')
+      path: '/servicios/prestamos-solicitud',
+      name: 'prestamos-solicitud',
+      component: () => import(/* webpackChunkName: "prestamos-solicitud" */ './views/servicios/PrestamosRequisitos.vue')
     }
   ]
 })

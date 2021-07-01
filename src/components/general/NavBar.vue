@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar fixed="top" toggleable="lg" type="light" variant="light">
+    <b-navbar id="menu" toggleable="lg" type="dark" variant="info" fixed="top" bg="inverse">
       <b-container>
         <b-navbar-toggle target="nav_collapse"/>
         <b-navbar-brand :to="{name:'inicio'}">
@@ -11,7 +11,25 @@
           >
         </b-navbar-brand>
         <b-collapse is-nav id="nav_collapse">
-          <b-navbar-nav>
+        <b-navbar-nav>
+    <div>
+     <b-button @click="modalShow = !modalShow">Información Importante</b-button> 
+    <b-modal size="xl" v-model="modalShow">
+    <img width="100%" height="100%" src="../../assets/img/icons/POR_RAZONES_9.png">
+     
+    </b-modal>
+  
+</div>
+
+    <b-alert
+      :show="dismissCountDown"
+      dismissible
+      variant="warning"
+      @dismissed="dismissCountDown=0"
+      @dismiss-count-down="countDownChanged"
+    >
+      This alert will dismiss after {{ dismissCountDown }} seconds...
+    </b-alert>
             <div v-for="(item, index) of items" :key="index">
               <b-nav-item
                 v-if="item.tipo === 'Simple' && item.linkArchivo === false"
@@ -31,20 +49,37 @@
                   <b-dropdown-item v-if="itemAnidado.linkArchivo === false" :to="{name: itemAnidado.ruta}">{{itemAnidado.descripcion}}</b-dropdown-item>
                   <b-dropdown-item v-if="itemAnidado.linkArchivo === true" :href="itemAnidado.ruta" target="_blank">{{itemAnidado.descripcion}}</b-dropdown-item>
                 </div>
+                
               </b-nav-item-dropdown>
             </div>
+            
           </b-navbar-nav>
         </b-collapse>
       </b-container>
+      
     </b-navbar>
   </div>
+  
+  
+ 
 </template>
 
 <style>
 .navbar {
   border-bottom: 3px solid #f58634;
 }
+
 </style>
+
+<script>
+$(window).scroll(function(){
+if($("#menu").offset().top >56){
+  $("#menu").addClass("bg-inverse");
+} else{
+  $("#menu").removeClass("bg-inverse");
+}
+});
+</script>
 
 
 <script>
@@ -52,6 +87,7 @@ export default {
   name: "NavBar",
   data() {
     return {
+      modalShow: true,
       items: [
         {
           descripcion: "Inicio",
@@ -208,10 +244,10 @@ export default {
             },
             
             {
-              descripcion: "Prestamos - Requisitos",
+              descripcion: "Prestamos - Solicitud",
               tipo: "Simple",
               linkArchivo: false,
-              ruta: "prestamos-requisitos"
+              ruta: "prestamos-solicitud"
             }
           ]
         }
@@ -219,7 +255,8 @@ export default {
     };
   }
 };
-</script>
+  </script>
+
 
 
 

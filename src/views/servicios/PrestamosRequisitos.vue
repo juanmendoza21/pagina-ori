@@ -3,21 +3,25 @@
     <TituloPrincipal :titulo="titulo"/>
     
     <hr>
-    <h3>Solicitar Préstamo</h3>
+    
       <b-col lg="12" class="mt-2">
           <b-card align="center">
-            <h4 slot="header">Préstamos Online</h4>
-             <b-button href="#" >
+            <h4 slot="header" style="text-shadow: 1px 2px 1px grey;">SOLICITAR PRÉSTAMOS</h4>
+             <b-button href="#" style="border-bottom: 2px solid #f58634;">            
+                <h5 slot="header" style="text-shadow: 1px 2px 1px black;">SOLICITAR PRÉSTAMO HASTA $50.000 (Hasta 36 cuotas)</h5>   
             <img width="200" height="84" src="../../assets/img/icons/Boton_PRESTAMO_TRADICIONAL.png">
                 </b-button> 
+          
                 <hr>
-                <b-button href="#" >
+                 <b-button href="#" style="border-bottom: 2px solid #f58634;">
+                <h5 slot="header" style="text-shadow: 1px 2px 1px black;">SOLICITAR PRÉSTAMO DESDE $60.000 HASTA $100.000 (Hasta 12 cuotas)</h5>              
             <img width="200" height="84" src="../../assets/img/icons/Boton_PRESTAMO_TRADICIONAL.png">
                 </b-button> 
-                <p style="text-align: center;"><span style="font-size: 18pt;"><strong><a href="/servicios/prestamos-condiciones" target="_top" rel="noopener noreferrer">MONTOS Y CUOTAS Click acá</a></strong></span></p>
-                <p style="text-align: center;"><span style="font-size: 18pt;"><strong><a href="index.php/servicios/consultas" target="_blank" rel="noopener noreferrer"><span style="font-size: 16pt;">CONSULTAS SOBRE PRÉSTAMOS Click acá</span></a></strong></span></p>
-                  <hr>
-            <b-card-text>(Nos contactamos por mail. Días hábiles de 7.00 a 13.00hs) </b-card-text>
+              <hr>
+                <b-button href="#" style="border-bottom: 2px solid #f58634;">
+                  <h5 slot="header" style="text-shadow: 1px 2px 1px black;">SOLICITAR PRÉSTAMO DE EMERGENCIA (Hasta 8 cuotas)</h5>
+            <img width="200" height="84" src="../../assets/img/icons/Boton-PRESTAMO_DE_EMERGENCIA.png">
+                </b-button> 
           </b-card>
         </b-col>
        
@@ -46,7 +50,7 @@ export default {
   name: "VPrestamosSolicitud",
   data() {
     return {
-      titulo: "SOLICITUD DE PRÉSTAMO",
+      titulo: "",
       iframeSolicitud: {
         src: "https://docs.google.com/forms/d/e/1FAIpQLSdu8jDZP3ShgkTa_AQGzTFlqbI0XvoA_Jo5LgYcXbAox6iibg/viewform",
         altura: "880px",

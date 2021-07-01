@@ -7,11 +7,14 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.0.0-rc.14",
     "ciao-vue-popup": "^1.0.20",
+    "portal-vue": "^2.1.7",
     "vue": "^2.6.8",
     "vue-fullpage-modal": "^0.5.3",
+    "vue-luxon": "^0.10.0",
     "vue-modaltor": "^1.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -19,8 +22,9 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-service": "^4.5.13",
-    "node-sass": "^6.0.0",
+    "node-sass": "^6.0.1",
     "sass-loader": "^12.1.0",
+    "vue-particles": "^1.0.9",
     "vue-template-compiler": "^2.5.21"
   },
   "postcss": {
