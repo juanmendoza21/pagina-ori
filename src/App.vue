@@ -1,7 +1,7 @@
 <template>
 
   <div class="fuente-personalizada">
-    <div id="app">
+    <!--<div id="app">
      <div class="particles-js">      
       <vue-particles
         color="#dedede"
@@ -21,17 +21,17 @@
         clickMode="push"
       >
       </vue-particles>
-    </div>
+    </div>-->
     
     <!--  -->
     
     <NavBar/>
-    <b-container class="mt-5 py-4">
+    <b-container class="mt-8 py-4">
       <router-view/>  
     </b-container>
     <Footer/>
   </div>
-</div>
+
 
   
 </template>
@@ -44,7 +44,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background: #182a3f;
+  background: #d5d8db;
 }
   
   div.barra-color {
@@ -57,7 +57,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: #e3eaf1;
   }
   
   .wrap-banner {
@@ -94,14 +94,14 @@
 <script>
 import NavBar from "@/components/general/NavBar.vue";
 import Footer from "@/components/general/Footer.vue";
-import HelloWorld from "@/components/general/HelloWorld.vue";
+
 
 export default {
   name: "app",
   components: {
     
     NavBar,
-    HelloWorld,
+    
     Footer
   }
 };

@@ -1,17 +1,17 @@
 <template>
   <div>
     <div class="mb-3">
-      <b-button v-b-toggle.my-collapse>Toggle Collapse</b-button>
-      <b-button v-b-toggle.my-sidebar>Toggle Sidebar</b-button>
+      <a v-b-toggle href="#example-collapse" @click.prevent>Toggle Collapse</a>
+      <b-button v-b-toggle href="#example-sidebar" @click.prevent>Toggle Sidebar</b-button>
     </div>
 
-    <b-collapse id="my-collapse">
+    <b-collapse id="example-collapse">
       <b-card title="Collapsible card">
         Hello world!
       </b-card>
     </b-collapse>
 
-    <b-sidebar id="my-sidebar" title="Sidebar" shadow>
+    <b-sidebar id="example-sidebar" title="Sidebar" shadow>
       <div class="px-3 py-2">
         Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
         in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
